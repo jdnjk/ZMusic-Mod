@@ -1,0 +1,18 @@
+plugins {
+    id 'net.neoforged.gradle:userdev' version '7.0.182'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+dependencies {
+    implementation "net.neoforged:neoforge:21.1.127"
+
+    implementation project(":zmusic-core")
+}
+
+jar {
+    dependsOn(":zmusic-core:jar")
+}
